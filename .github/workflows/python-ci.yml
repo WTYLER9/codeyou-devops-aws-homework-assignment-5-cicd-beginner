@@ -31,7 +31,7 @@ jobs:
         run: pip install safety
       
       - name: run safety
-        run: safety check -r requirements.txt
+        run: safety scan -r requirements.txt
 
       - name: installing bandit
         run: pip install bandit
