@@ -31,6 +31,8 @@ jobs:
         run: pip install safety
       
       - name: run safety
+        env:
+          SAFETY_API_KEY: ${{ secrets.SAFETY_API_KEY }}
         run: safety scan -r requirements.txt
 
       - name: installing bandit
