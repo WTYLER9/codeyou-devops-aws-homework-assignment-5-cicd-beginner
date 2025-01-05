@@ -33,7 +33,7 @@ jobs:
       - name: run safety
         env:
           SAFETY_API_KEY: ${{ secrets.cisafetyapi }}
-        run: safety scan -r requirements.txt
+        run: safety scan -r requirements.txt --apply-fixes
 
       - name: installing bandit
         run: pip install bandit
